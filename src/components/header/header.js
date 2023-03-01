@@ -15,6 +15,7 @@ export default function Header(props) {
         <span className="header-logo">
           <Link to="/">Kilimo.Africa</Link>
         </span>
+        
         <span className="header-info">
           <select className="services-header" onChange={handleSelectChange}>
             <option value="" disabled selected>
@@ -48,6 +49,14 @@ export default function Header(props) {
           <Link to="/blog">Careers</Link>
           <Link to="/contact">Contact Us</Link>
         </span>
+
+        <div className="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <span className="header-logs">
           <Link to="login">Log In</Link>
           {/* <Button text="Log In" /> */}

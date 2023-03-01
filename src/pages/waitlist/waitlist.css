@@ -1,18 +1,16 @@
 #wait-page {
   min-height: 80vh;
   width: 100%;
-  border: thin solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--tertiary-color);
 }
 
 #wait-form {
   width: 50%;
-  border: thin solid black;
   height: max-content;
+  background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +22,7 @@
   margin-bottom: 0.5vh;
 }
 
-#wait-page> h1 {
+#wait-page > h1 {
   text-align: center;
 }
 
@@ -32,8 +30,13 @@
   width: 80%;
   height: 5vh;
   display: flex;
+  background-color: var(--tertiary-color);
   align-items: center;
   justify-content: space-evenly;
+}
+
+#wait-form > span input {
+  border: none;
 }
 
 #wait-form > textarea {
@@ -62,9 +65,9 @@ textarea:focus {
 }
 
 #wait-form button {
-  border: thin solid black;
   width: 80%;
   height: 5vh;
+  border: thin solid var(--primary-color);
   background-color: var(--primary-color);
   color: var(--tertiary-color);
 }
@@ -72,4 +75,90 @@ textarea:focus {
 .wait-icons {
   size: 2rem;
   color: var(--primary-color);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 40vh; */
+  width: 30vw;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal > * {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.modal-head {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.modal-par {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.check-icon {
+  color: var(--primary-color);
+  font-size: 3em;
+}
+
+.modal-button {
+  width: 10vw;
+  height: 4vh;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: thin solid var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for phone and tablet devices */
+
+  #wait-page {
+    width: 98%;
+  }
+
+  #wait-form {
+    width: 100%;
+  }
+
+  .modal {
+    width: 80%;
+  }
+
+  .modal-button {
+    width: 40vw;
+  }
 }
